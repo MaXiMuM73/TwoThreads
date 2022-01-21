@@ -60,14 +60,12 @@ public class Test {
         }
     });
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         reader.setDaemon(true);
         writer.setDaemon(true);
         writer.start();
         reader.start();
-        while (true) {
-
-        }
+        Thread.sleep(5000);
     }
 
     private static int getRandomInt(int max) {
